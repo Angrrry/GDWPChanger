@@ -18,7 +18,7 @@ def setWP(filename):
         # sstm("kquitapp5 plasmashell")
         # sstm(r"kstart5 plasmashell &") #KDE
         # requires https://github.com/RaitaroH/KDE-Terminal-Wallpaper-Changer installed
-        sstm("ksetwallpaper {}".format(filename))
+        sstm("ksetwallpaper {}&".format(filename))
 
 
 if __name__ == '__main__':

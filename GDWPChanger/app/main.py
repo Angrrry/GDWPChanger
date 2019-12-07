@@ -1,11 +1,9 @@
 # -*- coding: utf-8 -*-
 from connection import is_connected
+import sys
 
 
 def main():
-    # Нужно было для проверки адреса интерпретатора python
-    #import sys
-    # print(sys.executable)
     from login import get_credentials
     from get_piclist2 import get_GD_list
     from download import download_file
@@ -33,8 +31,12 @@ def main():
 
 
 if __name__ == '__main__':
-    from time import sleep
-    while is_connected() == False:
-        print("fucked")
-        sleep(60)
-    main()
+    if len(sys.argv) == 1:
+        from time import sleep
+        while is_connected() == False:
+            print("fucked")
+            sleep(60)
+        main()
+    elif sys.argv[1] = "upload":
+        path = sys.argv[2]
+        print("Пока ни хера не готово")
