@@ -28,9 +28,10 @@ def main():
     http = credentials.authorize(Http())
     service = discovery.build('drive', 'v3', http=http)
     FOLDER_NAME = "Vert"
-    FOLDER_ID = "1g6DdBYoE5VCfYVmU9oOzBrK1B05Yb-iw"
+    FOLDER_ID = "1A2BDig0NL5jYBtnIrXcEAQmn1XDD2rWR"
     ids = get_GD_list(credentials, http, service,
                       FOLDER_NAME, FOLDER_ID=FOLDER_ID)
+    print(len(ids))
     wppath = path.join(pth, "sync", "Vert.txt")
     with open(wppath, "w") as f:
         f.write('\n'.join(ids))

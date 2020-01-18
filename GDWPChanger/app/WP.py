@@ -1,4 +1,5 @@
 import platform
+import os
 
 
 def setWP(filename):
@@ -21,6 +22,11 @@ def setWP(filename):
         sstm("ksetwallpaper {}&".format(filename))
 
 
+def main():
+    filename = os.path.join(os.path.dirname(
+        os.path.abspath(__file__)), "wallpaper.jpg")
+    setWP(filename)
+
+
 if __name__ == '__main__':
-    # is_connected()
-    print("I'm here")
+    main()

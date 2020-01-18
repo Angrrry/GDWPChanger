@@ -37,6 +37,6 @@ if __name__ == '__main__':
             print("fucked")
             sleep(60)
         main()
-    elif sys.argv[1] = "upload":
+    elif sys.argv[1] == "upload":
         path = sys.argv[2]
         print("Пока ни хера не готово")
